@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>vue-native-websocket | ddx</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="vue-native-websocket" />
+  
+  
+  
+  
+  <meta name="description" content="安装vue-native-websocket123yarn add vue-native-websocket# ornpm install vue-native-websocket --save  main.js全局调用123456import VueNativeSock from &#39;vue-native-websocket&#39;Vue.use(VueNativeSock, &#39;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue-native-websocket">
+<meta property="og:url" content="http://yoursite.com/2024/02/22/vue-native-websocket/index.html">
+<meta property="og:site_name" content="ddx">
+<meta property="og:description" content="安装vue-native-websocket123yarn add vue-native-websocket# ornpm install vue-native-websocket --save  main.js全局调用123456import VueNativeSock from &#39;vue-native-websocket&#39;Vue.use(VueNativeSock, &#39;">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-02-22T08:29:31.000Z">
+<meta property="article:modified_time" content="2024-02-22T09:48:57.781Z">
+<meta property="article:author" content="ddx">
+<meta property="article:tag" content="vue-native-websocket">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="ddx" type="application/atom+xml">
+  
+
+  
+
+  <link rel="icon" href="/css/images/logo.png">
+  <link rel="apple-touch-icon" href="/css/images/logo.png">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt; src:url("css/fonts/FuturaPTBold.otf") format("woff");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt-light; src:url("css/fonts/FuturaPTBook.otf") format("woff");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt-italic; src:url("css/fonts/FuturaPTBookOblique.otf") format("woff");font-weight:400;font-style:italic;}
+}
+
+  </style>
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+  
+<script src="/js/bootstrap.js"></script>
+
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+
+  
+    
+<link rel="stylesheet" href="/css/dialog.css">
+
+  
+
+  
+
+  
+    <link rel="stylesheet" href="/css/header-post.css" >
+  
+
+  
+  
+  
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+  <div id="container">
+    <div id="wrap">
+      
+        <header>
+
+    <div id="allheader" class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="navbar-inner">
+
+          <div class="container">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            
+              <a class="brand" style="
+                 margin-top: 10px;"
+                href="#" data-toggle="modal" data-target="#myModal" >
+                  <img width="60px" height="60px" alt="Hike News" src="/css/images/logo.png">
+              </a>
+            
+
+            <div class="navbar-collapse collapse">
+              <ul class="hnav navbar-nav">
+                
+                  <li> <a class="main-nav-link" href="/">首页</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/archives">归档</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/categories">分类</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/tags">标签</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/about">关于</a> </li>
+                
+                  <li><div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(无标题)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+
+</div></li>
+            </div>
+          </div>
+
+      </div>
+    </div>
+
+</header>
+<script>
+    $('header').find('a').each(function () {
+        if (this.href == document.location.href || document.location.href.search(this.href) >= 0) {
+            $(this).parent().addClass('active');
+        }
+    });
+    $(".navbar-nav").children("li").eq(0).removeClass('active');
+</script>
+
+
+
+      
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-vue-native-websocket" style="width: 75%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      vue-native-websocket
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2024/02/22/vue-native-websocket/" class="article-date">
+	  <time datetime="2024-02-22T08:29:31.000Z" itemprop="datePublished">2024-02-22</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/vue/">vue</a>
+
+      
+	<a class="article-views">
+	<span id="busuanzi_container_page_pv">
+		阅读量<span id="busuanzi_value_page_pv"></span>
+	</span>
+	</a>
+
+      
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="安装vue-native-websocket"><a href="#安装vue-native-websocket" class="headerlink" title="安装vue-native-websocket"></a>安装vue-native-websocket</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yarn add vue-native-websocket</span><br><span class="line"># or</span><br><span class="line">npm install vue-native-websocket --save</span><br></pre></td></tr></table></figure>
+
+<h3 id="main-js全局调用"><a href="#main-js全局调用" class="headerlink" title="main.js全局调用"></a>main.js全局调用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">import VueNativeSock from &#39;vue-native-websocket&#39;</span><br><span class="line">Vue.use(VueNativeSock, &#39;ws:&#x2F;&#x2F;10.56.72.29:6432&#39;, &#123;</span><br><span class="line">  reconnection: true, &#x2F;&#x2F; 是否自动重连</span><br><span class="line">  reconnectionAttempts: Infinity, &#x2F;&#x2F; 自动重连次数 无限重连</span><br><span class="line">  reconnectionDelay: 1000, &#x2F;&#x2F; 重连间隔时间</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="组件内使用"><a href="#组件内使用" class="headerlink" title="组件内使用"></a>组件内使用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">sockets: &#123;</span><br><span class="line">   &#x2F;&#x2F; 连接成功</span><br><span class="line">   onopen() &#123;</span><br><span class="line">     console.log(&quot;socket success&quot;);</span><br><span class="line">   &#125;,</span><br><span class="line">   &#x2F;&#x2F; 接收消息</span><br><span class="line">   onmessage(msg) &#123;</span><br><span class="line">     let that &#x3D; this;</span><br><span class="line">     if (msg.data instanceof Blob) &#123;</span><br><span class="line">       msg.data.text().then(function(asciiString) &#123;</span><br><span class="line">         let asciiString1 &#x3D; asciiString.split(&#39;&#39;).reverse().join(&quot;&quot;);</span><br><span class="line">         let weight &#x3D; &quot;0000000&quot;;</span><br><span class="line">         if (asciiString1) &#123;</span><br><span class="line">           weight &#x3D; asciiString1.slice(1, 8);</span><br><span class="line">         &#125;</span><br><span class="line">         that.weight &#x3D; weight;</span><br><span class="line">         that.asciiString &#x3D; asciiString1;</span><br><span class="line">       &#125;);</span><br><span class="line">     &#125; else &#123;</span><br><span class="line">       that.$message(&#123;</span><br><span class="line">         message: msg.data,</span><br><span class="line">         type: &#39;error&#39;</span><br><span class="line">       &#125;)</span><br><span class="line">     &#125;</span><br><span class="line">   &#125;,</span><br><span class="line">   &#x2F;&#x2F; 连接报错</span><br><span class="line">   onerror(e) &#123;</span><br><span class="line">     let that&#x3D;this;</span><br><span class="line">     console.log(e);</span><br><span class="line">     that.$options.sockets &#x3D; &#123;url: &#39;ws:&#x2F;&#x2F;10.56.72.29:6432&#39;&#125;; &#x2F;&#x2F;重新定义地址</span><br><span class="line">   &#125;,</span><br><span class="line">   &#x2F;&#x2F; 关闭连接</span><br><span class="line">   onclose() &#123;</span><br><span class="line">     console.log(&quot;socket close&quot;);</span><br><span class="line">   &#125;,</span><br><span class="line"> &#125;,</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2024/01/16/scanCode/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">扫码枪中文输入法问题</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="toc-sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装vue-native-websocket"><span class="nav-number">1.</span> <span class="nav-text">安装vue-native-websocket</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#main-js全局调用"><span class="nav-number">2.</span> <span class="nav-text">main.js全局调用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#组件内使用"><span class="nav-number">3.</span> <span class="nav-text">组件内使用</span></a></li></ol>
+    
+    </div>
+  </aside>
+
+</section>
+        
+      </div>
+      
+      <footer id="footer">
+  
+
+  <div class="container">
+      	<div class="row">
+	      <p> Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/iTimeTraveler/hexo-theme-hiker" target="_blank">Hexo-theme-hiker</a> </p>
+	      <p id="copyRightEn">Copyright &copy; 2020 - 2024 ddx All Rights Reserved.</p>
+
+	      
+<!--    		<p class="busuanzi_uv">-->
+<!--				site_uv : <span id="busuanzi_value_site_uv"></span> |  -->
+<!--				site_pv : <span id="busuanzi_value_site_pv"></span>-->
+<!--		    </p>-->
+  		   
+		</div>
+
+
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+    var allheader = document.getElementById("allheader");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight + "px";
+    if (allheader != null) {
+      contentdiv.style.minHeight = document.body.offsetHeight - allheader.offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    } else {
+      contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    }
+</script>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/scripts.js"></script>
+
+
+
+
+
+  
+<script src="/js/dialog.js"></script>
+
+
+
+
+
+
+
+
+
+
+	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="myModalLabel">设置</h2>
+      </div>
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+
+
+      <div class="modal-body">
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" onclick="javascript:setFontSize();" aria-expanded="true" aria-controls="collapseOne">
+              正文字号大小
+            </a>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+          <div class="panel-body">
+            您已调整页面字体大小
+          </div>
+        </div>
+      
+
+
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" onclick="javascript:setBackground();" aria-expanded="true" aria-controls="collapseTwo">
+              夜间护眼模式
+            </a>
+        </div>
+          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="panel-body">
+            夜间模式已经开启，再次单击按钮即可关闭 
+          </div>
+        </div>
+
+        <div>
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;关 于&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        </div>
+         <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body">
+            ddx
+          </div>
+          <div class="panel-body">
+            Copyright © 2024 ddx All Rights Reserved.
+          </div>
+        </div>
+      </div>
+
+
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <div class="modal-footer">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+  
+    <a id="menu-switch"><i class="fa fa-bars fa-lg"></i></a>
+  
+</body>
+</html>
